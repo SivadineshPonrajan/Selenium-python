@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Selenium Testing</title>
+	<style type="text/css">
+		.numbers{
+			border: 1px outset black;
+		    height:50px;
+		    width:50px;
+		    margin: 10px 10px;
+		    cursor:pointer;
+		}
+		.numbers:active {
+			box-shadow: 5px 5px 5px black;
+			bottom:-4px;
+		}
+	</style>
+</head>
+<body>
+<center>
+	<form id="form1">
+		<h3>Select By Id - "input1"</h3>
+		<input type="text" name="selectbyid" placeholder='Id - "input1"' id="input1">
+	</form>
+	<form id="loginform">
+		<h3>Select By name - "username"</h3>
+		<input type="text" name="username" placeholder='Name - "username"' id="input2">
+	</form>
+	<form>
+		<h3>Select by Class Name - "numbers"</h3>
+		<div id="content">
+			<input type="text" name="display" id="display"><br><br>
+			<button class="numbers" type="button" onclick="textdisplay(this)">1</button>
+			<button class="numbers" type="button" onclick="textdisplay(this)">2</button>
+			<button class="numbers" type="button" onclick="textdisplay(this)">3</button>
+			<br>
+			<button class="numbers" type="button" onclick="textdisplay(this)">4</button>
+			<button class="numbers" type="button" onclick="textdisplay(this)">5</button>
+			<button class="numbers" type="button" onclick="textdisplay(this)">6</button>
+			<br>
+			<button class="numbers" type="button" onclick="textdisplay(this)">7</button>
+			<button class="numbers" type="button" onclick="textdisplay(this)">8</button>
+			<button class="numbers" type="button" onclick="textdisplay(this)">9</button>
+			<br>
+			<button class="numbers" type="button" onclick="textdisplay(this)">*</button>
+			<button class="numbers" type="button" onclick="textdisplay(this)">0</button>
+			<button class="numbers" type="button" onclick="textdisplay(this)">/</button>
+		</div>
+	</form>
+	<form id="dropform">
+		<h3>Select By Tag - "select"</h3>
+		<select id="dropdown" name="dropdown">
+			<option value="100">100</option>
+			<option value="200">200</option>
+			<option value="300">300</option>
+			<option value="400">400</option>
+			<option value="500">500</option>
+		</select>
+		<input type="submit" name="continue" value="Submit" />
+</form>
+</center>
+<script type="text/javascript">
+	function textdisplay(x)
+	{
+		textbox = document.getElementById('display');
+		textbox.value += x.innerText;
+	}
+</script>
+</body>
+</html>
